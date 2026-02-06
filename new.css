@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela Round", "Quicksand", sans-serif;
+  background: url(together.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+.petal-layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.petal {
+  position: absolute;
+  top: -10vh;
+  border-radius: 60% 40% 60% 40%;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
+  animation-name: petal-fall, petal-sway;
+  animation-timing-function: ease-in, ease-in-out;
+  animation-iteration-count: 1, infinite;
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(240deg);
+  }
+}
+
+@keyframes petal-sway {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px 48px;
+  position: relative;
+  z-index: 3;
+}
+
+
+.postcard {
+  width: min(90vw, 800px);
+  height: auto;
+  background: rgba(0, 0, 0, 0.45);
+
+  margin: 0 auto;
+  border-radius: 2%;
+  display: flex;
+  justify-content: space-between;
+  padding: clamp(1.5rem, 4vw, 3em);
+  box-shadow: 0.8em 0.8em 15px rgba(0, 0, 0, 0.3);
+  transform-origin: top center;
+  animation: pendulum 4.5s ease-in-out infinite;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.postcard1 {
+  width: min(90vw, 800px);
+  height: auto;
+  min-height: 320px;
+  background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-filter: blur(2px);
+  z-index: 0;
+  margin: 0 auto;
+  border-radius: 2%;
+  display: flex;
+  justify-content: space-between;
+  padding: clamp(1.5rem, 4vw, 3em);
+  box-shadow: 0.8em 0.8em 15px rgba(0, 0, 0, 0.3);
+  transform-origin: top center;
+  transform: translate(-50%, -50%);
+  animation: pendulum-shadow 4.5s ease-in-out infinite;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(2.2rem, 6vw, 4.5em);
+  color: #fdfdfd;
+  margin: 0 0 12px;
+}
+
+/*animation*/
+.postcard:hover,
+.postcard:active,
+.postcard:focus {
+  animation-play-state: paused;
+  transform: rotate(0deg);
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.postcard::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  width: 2px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateX(-50%);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+.postcard::after {
+  content: "";
+  position: absolute;
+  top: -128px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+.mail_stamp {
+  width: 100px;
+  float: right;
+}
+
+.push {
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+
+/*footer*/
+footer {
+  margin: 1.5em auto 2.5em;
+  text-align: center;
+  font-family: "Varela Round", "Quicksand", sans-serif;
+  color: white;
+}
+
+footer p {
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+p span {
+  font-size: clamp(1.4rem, 3.5vw, 30px);
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+}
+
+.signature-color {
+  color: #ffd1e8;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+p {
+  font-size: clamp(1rem, 2.6vw, 22px);
+  font-family: cursive;
+  font-weight: 540;
+  line-height: 1.6;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+.ullu {
+  font-size: clamp(1.1rem, 3vw, 25px);
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.postcard {
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .postcard {
+    animation-duration: 5s;
+  }
+  .postcard1 {
+    animation-duration: 5s;
+  }
+}
+
+@keyframes pendulum {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2.5deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes pendulum-shadow {
+  0% {
+    transform: translate(-50%, -50%) rotate(-2deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(2.5deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-2deg);
+  }
+}
