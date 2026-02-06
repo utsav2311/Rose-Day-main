@@ -5,7 +5,7 @@
 
 body {
   font-family: "Varela Round", "Quicksand", sans-serif;
-  background: url(together.png);
+  background: url(background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -115,6 +115,7 @@ footer p {
   font-size: 1em;
   letter-spacing: 1px;
 }
+
 p span {
   font-size: clamp(1.4rem, 3.5vw, 30px);
   font-weight: 600;
