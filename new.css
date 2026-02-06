@@ -29,7 +29,7 @@ body {
 }
 
 .postcard {
-  width: min(90vw, 900px);
+  width: min(90vw, 800px);
   height: auto;
   background: rgba(255, 255, 255, 0.101);
 
@@ -146,5 +146,6 @@ p {
     transform: translate(-50%, -50%) rotate(1deg);
   }
 }
+
 
 
